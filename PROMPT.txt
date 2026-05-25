@@ -1,0 +1,550 @@
+I am a computer engineering student at the University of Missouri. 
+My completed courses are CS1050 and CS2050 in C (data structures, 
+sorting/searching algorithms). My math background is Calc I/II/III 
+and Differential Equations — no Linear Algebra yet. I am a Python 
+beginner. My goals this summer are to prepare for CMP_SC 3050 
+(Advanced Algorithm Design) and ECE 4750 (Artificial Intelligence I).
+
+I am following an 11-week self-study program. I am starting Week [X] 
+today. Please give me the full detailed plan for Week [X] including:
+- A day-by-day breakdown for both the Algorithms track and the AI track
+- All topics explained clearly with examples where helpful
+- Recommended free resources (MIT OCW, specific YouTube videos, etc.)
+- Coding exercises with instructions
+- LeetCode problem numbers to practice
+- A quiz or set of practice questions at the end of the week
+- Any tips specific to my background
+
+Here is the overview of Week [X] from my study plan:
+[paste the relevant week block from below]
+
+Phase 1 — Foundations (Weeks 1–3)
+
+Week 1
+Algorithms Track — Python for C programmers + Big-O notation
+Topics:
+
+Python syntax for someone who knows C: variables, loops, conditionals, functions, lists, dictionaries, tuples
+Key differences from C: no pointers, no manual memory management, dynamic typing, indentation instead of braces
+Big-O notation: what it means, how to read it, O(1), O(log n), O(n), O(n log n), O(n²)
+Time complexity vs space complexity
+Analyzing simple loops and recursive functions
+Recursion review: how Python handles it differently from C
+
+Resources:
+
+MIT OCW 6.006 Lecture 1 (free on YouTube)
+"Python for Everybody" on Coursera (free to audit)
+Python official docs: docs.python.org/3/tutorial
+
+LeetCode problems: #1 (Two Sum), #9 (Palindrome Number), #13 (Roman to Integer)
+Exercises:
+
+Rewrite 3 of your CS2050 C programs in Python (pick simple ones like linked list traversal or bubble sort)
+Write a function that counts how many operations a nested loop performs and plot it with matplotlib
+
+AI Track — What is AI? Agents and environments
+Topics:
+
+Brief history of AI: Turing test, expert systems, machine learning era, deep learning era
+What makes something "intelligent"
+Rational agents: what they are, what PEAS means (Performance, Environment, Actuators, Sensors)
+Types of environments: fully vs partially observable, deterministic vs stochastic, episodic vs sequential, static vs dynamic, discrete vs continuous
+Types of agents: simple reflex, model-based reflex, goal-based, utility-based, learning agents
+
+Resources:
+
+Russell & Norvig "Artificial Intelligence: A Modern Approach" Chapter 1 and 2 (your future ECE 4750 textbook — find a PDF online or request from Mizzou library)
+MIT OCW 6.034 Lecture 1 (free on YouTube)
+3Blue1Brown "But what is a neural network?" (YouTube — good intuition builder for later)
+
+Exercise:
+
+Pick 3 real-world systems (e.g. a thermostat, a chess engine, a spam filter) and write out the full PEAS description for each one
+
+Week 1 Quiz topics: Big-O analysis of given code snippets, identify environment types, write PEAS for a given agent
+
+Week 2
+Algorithms Track — Advanced trees
+Topics:
+
+Review of BSTs from CS2050: insert, search, delete
+Why BSTs can become unbalanced and why that's bad (O(n) worst case)
+AVL trees: balance factor, left rotation, right rotation, left-right and right-left rotations
+Red-black trees: the 5 properties, why they're used in practice (C++ STL map, Java TreeMap)
+B-trees: motivation (disk storage), order of a B-tree, insert and search operations
+Tree traversals deep dive: in-order, pre-order, post-order, level-order (BFS on trees)
+
+Resources:
+
+MIT OCW 6.006 Lectures 6 and 7
+"Visualgo" website (visualgo.net) — animated AVL and BST visualizations, extremely helpful
+Abdul Bari's AVL tree YouTube videos (search "Abdul Bari AVL tree")
+
+LeetCode problems: #98 (Validate BST), #110 (Balanced Binary Tree), #108 (Convert Sorted Array to BST)
+Exercises:
+
+Implement an AVL tree insert with rotations in Python
+Trace through 5 AVL insertions by hand on paper, drawing the tree at each step
+
+AI Track — Uninformed search
+Topics:
+
+What is a search problem: state space, initial state, goal test, actions, transition model, path cost
+Breadth-first search (BFS): how it works, completeness, optimality, time and space complexity
+Depth-first search (DFS): how it works, when it fails, when it's better than BFS
+Uniform cost search (UCS): expanding by path cost, relation to Dijkstra
+Iterative deepening DFS (IDDFS): combining BFS completeness with DFS space efficiency
+Comparing all four: a table of completeness, optimality, time, space for each
+
+Resources:
+
+MIT OCW 6.034 Lecture 2
+Russell & Norvig Chapter 3
+Sebastian Lague "Pathfinding" YouTube series (visual and intuitive)
+
+Exercise:
+
+Implement BFS and DFS in Python on a simple graph represented as a dictionary
+Trace BFS and DFS by hand on a small graph (draw it on paper) and compare the order nodes are visited
+
+Week 2 Quiz topics: AVL rotations, BST validation, BFS vs DFS complexity comparison, trace a search algorithm on a given graph
+
+Week 3
+Algorithms Track — Graph fundamentals
+Topics:
+
+Graph terminology: vertices, edges, directed vs undirected, weighted vs unweighted, degree
+Graph representations: adjacency matrix vs adjacency list — when to use each, space complexity tradeoffs
+BFS on graphs: finding shortest path in unweighted graphs, level-by-level exploration
+DFS on graphs: discovery and finish times, the DFS tree
+Topological sort: what it is, when it applies (DAGs only), Kahn's algorithm and DFS-based approach
+Connected components: finding them with BFS/DFS
+Cycle detection: in directed and undirected graphs
+
+Resources:
+
+MIT OCW 6.006 Lectures 13 and 14
+William Fiset's graph theory YouTube playlist (highly recommended, very clear)
+Visualgo.net graph section
+
+LeetCode problems: #207 (Course Schedule), #200 (Number of Islands), #133 (Clone Graph)
+Exercises:
+
+Implement a graph class in Python with both adjacency list and matrix representations
+Implement topological sort and test it on a dependency graph (e.g. course prerequisites)
+
+AI Track — Informed search and heuristics
+Topics:
+
+What makes a search "informed": using problem-specific knowledge
+Greedy best-first search: always expand the node that looks closest to the goal, why it can fail
+A* algorithm: f(n) = g(n) + h(n), how it balances cost so far and estimated cost to go
+Heuristic design: what makes a good heuristic
+Admissibility: never overestimates, guarantees optimality
+Consistency (monotonicity): h(n) ≤ cost(n, n') + h(n')
+Examples: 8-puzzle (Manhattan distance), route finding (straight line distance)
+Hill climbing: local search, local maxima problem, random restarts
+
+Resources:
+
+MIT OCW 6.034 Lecture 4
+Russell & Norvig Chapter 3 sections on informed search
+"A* Pathfinding for Beginners" by Patrick Lester (classic article, easy to find online)
+
+Exercise:
+
+Implement A* in Python on a grid (treat each cell as a node, use Manhattan distance as heuristic)
+Compare A* vs BFS on the same grid and count how many nodes each one expands
+
+Week 3 Quiz topics: topological sort trace, A* trace on a small graph, design an admissible heuristic for a given problem, cycle detection
+
+Phase 2 — Core Skills (Weeks 4–7)
+
+Week 4
+Algorithms Track — Shortest path algorithms
+Topics:
+
+Dijkstra's algorithm: greedy approach, priority queue implementation, O((V+E) log V) with a heap
+Why Dijkstra fails with negative edges
+Bellman-Ford: relaxation, handling negative edges, detecting negative cycles, O(VE)
+Floyd-Warshall: all-pairs shortest paths, dynamic programming approach, O(V³)
+Path reconstruction: how to track the actual path, not just the distance
+Real-world applications: GPS routing, network routing protocols
+
+Resources:
+
+MIT OCW 6.006 Lectures 15, 16, 17
+William Fiset Dijkstra and Bellman-Ford YouTube videos
+Visualgo.net shortest path section
+
+LeetCode problems: #743 (Network Delay Time), #787 (Cheapest Flights Within K Stops), #505 (The Maze II)
+Exercises:
+
+Implement Dijkstra in Python using the heapq module
+Implement Bellman-Ford and test it on a graph with a negative edge
+Trace Floyd-Warshall by hand on a 4-node graph
+
+AI Track — Adversarial search and games
+Topics:
+
+What makes a game different from a regular search problem: opponent moves
+Game tree: players, terminal states, utility function
+Minimax algorithm: MAX player, MIN player, recursive evaluation
+Why minimax is expensive: O(b^m) time
+Alpha-beta pruning: cutting branches that can't affect the result, how it reduces the search space
+Evaluation functions: when you can't search to the end, how to estimate position value
+Stochastic games: expectiminimax for games with chance (dice, card draws)
+
+Resources:
+
+MIT OCW 6.034 Lecture 6
+Sebastian Lague "Coding Adventure: Chess AI" YouTube (fun and visual)
+Russell & Norvig Chapter 5
+
+Exercise:
+
+Implement minimax for Tic-Tac-Toe in Python — make an unbeatable AI
+Add alpha-beta pruning to your minimax and count how many fewer nodes it evaluates
+
+Week 4 Quiz topics: trace Dijkstra on a given graph, explain why Bellman-Ford handles negatives, trace minimax on a small game tree, add alpha-beta pruning to a given tree
+
+Week 5
+Algorithms Track — Minimum spanning trees and greedy algorithms
+Topics:
+
+What is a spanning tree, what makes it minimum
+Kruskal's algorithm: sort edges, add if no cycle, union-find data structure
+Union-Find (Disjoint Set Union): union by rank, path compression, near O(1) operations
+Prim's algorithm: grow the MST from a starting node, priority queue approach
+Kruskal vs Prim: when to use each (sparse vs dense graphs)
+Greedy algorithm design: what makes greedy work, exchange argument proofs
+
+Resources:
+
+MIT OCW 6.006 Lecture 11
+William Fiset MST YouTube videos
+Visualgo.net MST section
+
+LeetCode problems: #1584 (Min Cost to Connect All Points), #1135 (Connecting Cities With Minimum Cost), #684 (Redundant Connection)
+Exercises:
+
+Implement union-find with path compression in Python
+Implement both Kruskal's and Prim's and test on the same graph, verify same result
+
+AI Track — Constraint satisfaction problems
+Topics:
+
+CSP formulation: variables, domains, constraints
+Examples: map coloring, Sudoku, n-queens, scheduling
+Backtracking search for CSPs: assign, check, recurse, undo
+Forward checking: eliminate values from future variable domains after each assignment
+Arc consistency and AC-3 algorithm: enforcing consistency between pairs of variables
+Heuristics for variable and value ordering: MRV (minimum remaining values), degree heuristic, least constraining value
+
+Resources:
+
+MIT OCW 6.034 Lecture 5
+Russell & Norvig Chapter 6
+"Solving Sudoku with AI" articles (many good ones online)
+
+Exercise:
+
+Implement a CSP solver in Python for the n-queens problem using backtracking
+Add MRV heuristic and compare how many steps it takes vs plain backtracking
+
+Week 5 Quiz topics: implement union-find, trace Kruskal's on a graph, formulate a given problem as a CSP, trace AC-3 on a small constraint graph
+
+Week 6
+Algorithms Track — Dynamic programming
+Topics:
+
+What DP is: overlapping subproblems + optimal substructure
+Top-down (memoization): recursion + cache
+Bottom-up (tabulation): fill a table iteratively
+Classic problems: Fibonacci (warm-up), coin change, 0/1 knapsack, longest common subsequence, edit distance
+How to recognize a DP problem
+How to define the state and the recurrence relation — this is the key skill
+
+Resources:
+
+MIT OCW 6.006 Lectures 18, 19, 20
+"Dynamic Programming — Learn to Solve Algorithmic Problems" freeCodeCamp YouTube (5 hours, worth it)
+Neetcode.io DP playlist
+
+LeetCode problems: #70 (Climbing Stairs), #322 (Coin Change), #300 (Longest Increasing Subsequence), #1143 (LCS), #72 (Edit Distance)
+Exercises:
+
+Solve coin change both top-down and bottom-up and compare
+Trace the knapsack DP table by hand for a small example
+
+AI Track — Logic and knowledge representation
+Topics:
+
+Propositional logic: syntax, semantics, truth tables
+Logical connectives: AND, OR, NOT, implication, biconditional
+Inference rules: modus ponens, modus tollens, resolution
+CNF (conjunctive normal form): why it's useful, how to convert to it
+Resolution algorithm: refutation-complete proof procedure
+First-order logic (FOL): predicates, quantifiers (∀, ∃), constants, functions
+Knowledge base agents: tell, ask, inference
+
+Resources:
+
+MIT OCW 6.034 Lectures 10, 11
+Russell & Norvig Chapters 7 and 8
+"Logic for Computer Science" Khan Academy section
+
+Exercise:
+
+Convert 5 English sentences into propositional logic
+Prove a simple theorem using resolution by hand
+Write a simple Python knowledge base using a dictionary and implement a basic inference function
+
+Week 6 Quiz topics: truth tables, convert to CNF, trace resolution proof, translate English to FOL, identify DP subproblems in a given problem
+
+Week 7
+Bridge Week — Linear algebra for ML + Probability for AI
+Linear Algebra (Bridge — Algorithms + AI)
+Topics:
+
+Vectors: what they are geometrically and algebraically, addition, scalar multiplication, dot product
+Matrices: multiplication, transpose, identity matrix
+Why matrix multiplication is not commutative
+Linear transformations: what a matrix does to space
+Eigenvectors and eigenvalues: intuition (directions that don't rotate, only scale)
+Why this matters for AI: data as vectors, weights as matrices, PCA uses eigenvectors
+NumPy: arrays, matrix operations, dot product, transpose — all the operations above in code
+
+Resources:
+
+3Blue1Brown "Essence of Linear Algebra" YouTube series (the single best resource for this — watch all 15 videos)
+NumPy quickstart: numpy.org/doc/stable/user/quickstart.html
+
+Exercise:
+
+Implement matrix multiplication from scratch in Python (no NumPy), then verify with NumPy
+Visualize 3 different linear transformations using matplotlib
+
+AI Track — Probability and Bayesian reasoning
+Topics:
+
+Probability review: sample space, events, P(A), P(A∩B), P(A∪B)
+Conditional probability: P(A|B)
+Bayes' theorem: P(A|B) = P(B|A)P(A) / P(B) — memorize this
+Why Bayes matters in AI: updating beliefs with evidence
+Conditional independence: what it means and why it simplifies things
+Bayesian networks: nodes are variables, edges are dependencies, compact representation of joint distribution
+Naive Bayes classifier: assumes all features independent given class label, surprisingly effective
+
+Resources:
+
+MIT OCW 6.034 Lecture 20
+3Blue1Brown "Bayes theorem" YouTube video
+Russell & Norvig Chapter 12 and 13
+
+Exercise:
+
+Implement a Naive Bayes spam classifier in Python from scratch using a small dataset
+Build a simple Bayesian network by hand for a medical diagnosis example (disease → symptom)
+
+Week 7 Quiz topics: Bayes theorem calculations, matrix multiplication by hand, identify conditional independence in a Bayesian network, classify with Naive Bayes
+
+Phase 3 — Machine Learning and Capstone (Weeks 8–11)
+
+Week 8
+Algorithms Track — String algorithms and tries
+Topics:
+
+Trie data structure: insert, search, prefix search, applications (autocomplete, spell check)
+KMP (Knuth-Morris-Pratt) string matching: failure function, O(n+m) matching
+Why naive string matching is O(nm) and why KMP is better
+Rabin-Karp: rolling hash approach to string matching
+Radix sort: non-comparison sort, O(nk) time, when it beats O(n log n) sorts
+Suffix arrays: what they are, basic construction idea
+
+Resources:
+
+MIT OCW 6.006 Lectures 9 and 10
+"Trie Data Structure" Abdul Bari YouTube
+"KMP Algorithm" Abdul Bari YouTube (very clear explanation)
+
+LeetCode problems: #208 (Implement Trie), #14 (Longest Common Prefix), #28 (Find the Index of First Occurrence in String)
+Exercises:
+
+Implement a Trie class in Python with insert, search, and startsWith methods
+Implement KMP and test it against Python's built-in find to verify correctness
+
+AI/ML Track — Introduction to machine learning
+Topics:
+
+The ML paradigm: instead of programming rules, learn from data
+Supervised vs unsupervised vs reinforcement learning
+Linear regression: hypothesis, cost function (MSE), gradient descent
+How gradient descent works: learning rate, steps, convergence
+Overfitting and underfitting: bias-variance tradeoff
+Train/validation/test split: why you need held-out data
+Regularization: L1 (Lasso) and L2 (Ridge) — intuition only
+
+Resources:
+
+Andrew Ng's Machine Learning Specialization on Coursera (free to audit — this is the gold standard beginner ML course)
+3Blue1Brown "Gradient descent, how neural networks learn" YouTube
+scikit-learn getting started guide: scikit-learn.org/stable/getting_started.html
+
+Exercise:
+
+Implement linear regression with gradient descent from scratch in Python using only NumPy
+Then do the same thing in 5 lines using scikit-learn and compare results
+Plot the regression line using matplotlib
+
+Week 8 Quiz topics: implement Trie operations, trace KMP failure function, explain bias-variance tradeoff, implement gradient descent update rule
+
+Week 9
+Algorithms Track — Network flow and divide and conquer
+Topics:
+
+Flow networks: source, sink, capacity, flow
+Max flow problem: find the maximum flow from source to sink
+Ford-Fulkerson algorithm: augmenting paths, residual graph
+Max flow min cut theorem: the duality between max flow and min cut
+Applications: bipartite matching, project selection
+Divide and conquer deep dive: merge sort analysis, master theorem
+Master theorem: T(n) = aT(n/b) + f(n), three cases
+
+Resources:
+
+MIT OCW 6.006 Lecture 13 (network flow)
+William Fiset max flow YouTube videos
+MIT OCW 6.006 recitation on master theorem
+
+LeetCode problems: #1091 (Shortest Path in Binary Matrix), #23 (Merge K Sorted Lists), #912 (Sort an Array)
+Exercises:
+
+Implement Ford-Fulkerson in Python on a small flow network
+Apply the master theorem to 5 different recurrences and determine the complexity
+
+AI/ML Track — Classification algorithms
+Topics:
+
+Classification vs regression: predicting a category vs a number
+Logistic regression: sigmoid function, decision boundary, log loss
+k-nearest neighbors (KNN): vote among k closest training points, choosing k
+Decision trees: splitting on features, information gain, Gini impurity
+Overfitting in decision trees, pruning
+Model evaluation: accuracy, precision, recall, F1 score, confusion matrix
+Cross-validation: k-fold, why it gives a better estimate than a single split
+
+Resources:
+
+Andrew Ng Machine Learning Specialization Week 3
+StatQuest with Josh Starmer YouTube — best channel for ML intuition (search "StatQuest logistic regression", "StatQuest decision tree")
+scikit-learn documentation on classification
+
+Exercise:
+
+Load the Iris dataset from scikit-learn and classify it using KNN, logistic regression, and a decision tree
+Compare their accuracy with cross-validation
+Plot a confusion matrix using matplotlib
+
+Week 9 Quiz topics: master theorem problems, trace Ford-Fulkerson on a small graph, calculate precision/recall from a confusion matrix, explain information gain
+
+Week 10
+Algorithms Track — NP-completeness and complexity
+Topics:
+
+Decision problems vs optimization problems
+Complexity classes: P (solvable in polynomial time), NP (verifiable in polynomial time)
+The P vs NP question: why it matters and why it's unsolved
+NP-complete: hardest problems in NP, if you solve one you solve all
+Polynomial reductions: showing problem A is at least as hard as problem B
+Classic NP-complete problems: 3-SAT, vertex cover, traveling salesman, knapsack
+Approximation algorithms: when exact is too slow, settle for good enough
+Dealing with NP-hard problems in practice: approximation, heuristics, special cases
+
+Resources:
+
+MIT OCW 6.006 Lectures 22, 23
+"P vs NP" Computerphile YouTube (great intuitive explanation)
+Russell & Norvig Chapter 6 sidebar on complexity
+
+LeetCode problems: #698 (Partition to K Equal Sum Subsets), #494 (Target Sum), #1723 (Find Minimum Time to Finish All Jobs)
+Exercise:
+
+Implement a 2-approximation algorithm for vertex cover in Python
+Implement a greedy approximation for TSP (nearest neighbor heuristic) and measure how far it is from optimal on a small instance
+
+AI/ML Track — Neural networks introduction
+Topics:
+
+Biological inspiration: neurons, synapses
+Perceptron: inputs, weights, bias, activation function
+Multi-layer perceptron (MLP): hidden layers, why depth matters
+Activation functions: sigmoid, ReLU, tanh — when to use each
+Forward pass: computing the output
+Backpropagation intuition: chain rule, how gradients flow backward
+Loss functions: MSE for regression, cross-entropy for classification
+Training a neural network with scikit-learn's MLPClassifier
+
+Resources:
+
+3Blue1Brown "Neural Networks" YouTube series (all 4 videos — essential viewing)
+Andrew Ng Machine Learning Specialization neural networks week
+"Neural Networks from Scratch" book by Harrison Kinsley (free online at nnfs.io)
+
+Exercise:
+
+Implement a single perceptron from scratch in Python and train it on a linearly separable dataset
+Train an MLPClassifier from scikit-learn on the MNIST handwritten digits dataset and report accuracy
+
+Week 10 Quiz topics: identify if a problem is in P or NP, perform a reduction argument, explain backpropagation in plain English, calculate a forward pass by hand for a 2-layer network
+
+Week 11 — Capstone
+Algorithms Track — Full review and mock exam
+Review topics (go back to any weak areas):
+
+AVL rotations
+Dijkstra and Bellman-Ford
+DP recurrence relations
+Graph algorithms (topological sort, BFS, DFS)
+NP-completeness arguments
+Master theorem
+
+Mock exam: ask Claude to generate a timed 90-minute CMP_SC 3050 style exam covering all algorithm topics. Take it without help, then review answers.
+LeetCode: do 5 medium-difficulty problems of your choice, timed at 25 minutes each.
+AI Track — Reinforcement learning and full review
+Topics:
+
+What reinforcement learning is: agent, environment, reward, policy
+Markov Decision Processes (MDPs): states, actions, transition probabilities, rewards, discount factor
+Value functions: V(s) — expected future reward from state s
+Q-learning: Q(s,a) — value of taking action a in state s, Bellman equation for Q
+How Q-learning updates: Q(s,a) ← Q(s,a) + α[r + γ·max Q(s',a') − Q(s,a)]
+The explore vs exploit tradeoff: epsilon-greedy strategy
+Where RL shows up in AI: game playing (AlphaGo), robotics, recommendation systems
+
+Resources:
+
+Sutton & Barto "Reinforcement Learning: An Introduction" Chapter 1 (free PDF online)
+"Q-learning explained" DeepLizard YouTube series
+OpenAI Spinning Up introduction to RL (spinningup.openai.com)
+
+Capstone Project:
+Build one of the following in Python (your choice):
+
+Option A: Implement A* search on a maze you generate randomly, visualize the path with matplotlib
+Option B: Train a Naive Bayes classifier on a real dataset (e.g. SMS spam from UCI repository) and report precision, recall, F1
+Option C: Implement a minimax Tic-Tac-Toe AI and play against it
+
+Week 11 deliverable: push your capstone project to your summer-study GitHub repository.
+
+Tool Reference
+
+VS Code: code editor
+Python 3.9.7: main language
+Jupyter notebooks (.ipynb): use for AI and ML weeks
+Python files (.py): use for algorithm implementations
+Libraries: numpy, matplotlib, scikit-learn, pandas, jupyter
+LeetCode: algorithm practice problems (set default to Python3)
+GitHub repo: Straussj730/Summer-study
+
